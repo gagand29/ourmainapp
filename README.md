@@ -17,6 +17,7 @@ To get started with the project:
 
 ## Project Structure
 
+
 -   **app/**: Contains the application logic.
 -   **database/**: Includes database migrations and seeders.
 -   **public/**: Houses the public assets of the application.
@@ -33,10 +34,29 @@ To get started with the project:
 -   **Text Editor**: VS Code, with the following extensions:
     -   Laravel Blade Snippets
     -   PHP Namespace Resolver
+=======
+- **app/**: Contains the application logic.
+- **database/**: Includes database migrations and seeders.
+- **public/**: Houses the public assets of the application.
+- **resources/**: Contains views, language files, and assets.
+- **routes/**: Defines application routes.
+- **tests/**: Contains PHPUnit tests for the application.
+
+## Languages and Tools Used
+
+- **PHP**: Primary language used for backend development.
+- **JavaScript**: Used for frontend interactivity.
+- **HTML/CSS**: Structuring web pages and styling.
+- **MySQL**: Database management system.
+- **Text Editor**: VS Code, with the following extensions:
+  - Laravel Blade Snippets
+  - PHP Namespace Resolver
+
 
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository and submit pull requests with improvements or additional features.
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
