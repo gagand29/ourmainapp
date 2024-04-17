@@ -4,7 +4,18 @@ Welcome to the Laravel Social Media App repository! This project aims to develop
 
 ## Project Status
 
-⚠️ **Work in Progress**: The project is still under development. Basic functionalities like user registration and login have been implemented. Future updates will include additional features such as user profiles, content posting, and live search.
+⚠️ **Work in Progress**: Work in Progress
+The project is actively being developed and enhanced with new features. Here's what has been implemented so far:
+
+User Registration and Login: Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
+
+**User Profiles:** Users can now personalize their profiles by uploading avatars and updating their profile information.
+
+**Content Posting:** The ability to create and manage blog posts has been added. Users can create, edit, and delete their own blog posts.
+
+**File Uploads:** Users can upload files, such as avatars, to personalize their profiles.
+
+Future updates will include additional features such as user profiles, content posting, and live search.
 
 ## Getting Started
 
