@@ -5,6 +5,7 @@ Welcome to the Laravel Social Media App repository! This project aims to develop
 ## Project Status
 
 ⚠️ **Work in Progress**:
+
 The project is actively being developed and enhanced with new features. Here's what has been implemented so far:
 
 User Registration and Login: Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
@@ -41,8 +42,7 @@ To get started with the project:
 -   **JavaScript**: Used for frontend interactivity.
 -   **HTML/CSS**: Structuring web pages and styling.
 -   **MySQL**: Database management system.
--   **Text Editor**: VS Code, with the following extensions: - Laravel Blade Snippets - PHP Namespace Resolver
-    =======
+-   # **Text Editor**: VS Code, with the following extensions: - Laravel Blade Snippets - PHP Namespace Resolver
 -   **app/**: Contains the application logic.
 -   **database/**: Includes database migrations and seeders.
 -   **public/**: Houses the public assets of the application.
