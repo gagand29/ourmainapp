@@ -8,6 +8,7 @@ use Illuminate\Validation\Rule;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
+use App\Models\Follow;
 
 class UserController extends Controller
 {   
@@ -49,12 +50,27 @@ class UserController extends Controller
     }
 
     public function profile(User $user) {
+
+        $currentlyFollowing = 0;
+
+        if(auth()->check()) {
+
+            $currentlyFollowing = Follow::where([['user_id','=',auth()->user()->id],['followeduser','=',$user->id]])->count();
+
+        }
+
+        //$currentlyFollowing = Follow::where();
+
+
         return view('profile-posts', [
+            'currentlyFollowing' => $currentlyFollowing,
             'avatar' => $user->avatar,
             'username' => $user->username,
             'posts' => $user->posts()->latest()->get(),
             'postCount' => $user->posts()->count()
         ]);
+
+
     }
 
     public function logout() {

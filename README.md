@@ -4,7 +4,18 @@ Welcome to the Laravel Social Media App repository! This project aims to develop
 
 ## Project Status
 
-⚠️ **Work in Progress**: The project is still under development. Basic functionalities like user registration and login have been implemented. Future updates will include additional features such as user profiles, content posting, and live search.
+⚠️ **Work in Progress**:
+The project is actively being developed and enhanced with new features. Here's what has been implemented so far:
+
+User Registration and Login: Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
+
+**User Profiles:** Users can now personalize their profiles by uploading avatars and updating their profile information.
+
+**Content Posting:** The ability to create and manage blog posts has been added. Users can create, edit, and delete their own blog posts.
+
+**File Uploads:** Users can upload files, such as avatars, to personalize their profiles.
+
+Future updates will include additional features such as user profiles, content posting, and live search.
 
 ## Getting Started
 
@@ -17,7 +28,21 @@ To get started with the project:
 
 ## Project Structure
 
+-   **app/**: Contains the application logic.
+-   **database/**: Includes database migrations and seeders.
+-   **public/**: Houses the public assets of the application.
+-   **resources/**: Contains views, language files, and assets.
+-   **routes/**: Defines application routes.
+-   **tests/**: Contains PHPUnit tests for the application.
 
+## Languages and Tools Used
+
+-   **PHP**: Primary language used for backend development.
+-   **JavaScript**: Used for frontend interactivity.
+-   **HTML/CSS**: Structuring web pages and styling.
+-   **MySQL**: Database management system.
+-   **Text Editor**: VS Code, with the following extensions: - Laravel Blade Snippets - PHP Namespace Resolver
+    =======
 -   **app/**: Contains the application logic.
 -   **database/**: Includes database migrations and seeders.
 -   **public/**: Houses the public assets of the application.
@@ -34,29 +59,10 @@ To get started with the project:
 -   **Text Editor**: VS Code, with the following extensions:
     -   Laravel Blade Snippets
     -   PHP Namespace Resolver
-=======
-- **app/**: Contains the application logic.
-- **database/**: Includes database migrations and seeders.
-- **public/**: Houses the public assets of the application.
-- **resources/**: Contains views, language files, and assets.
-- **routes/**: Defines application routes.
-- **tests/**: Contains PHPUnit tests for the application.
-
-## Languages and Tools Used
-
-- **PHP**: Primary language used for backend development.
-- **JavaScript**: Used for frontend interactivity.
-- **HTML/CSS**: Structuring web pages and styling.
-- **MySQL**: Database management system.
-- **Text Editor**: VS Code, with the following extensions:
-  - Laravel Blade Snippets
-  - PHP Namespace Resolver
-
 
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository and submit pull requests with improvements or additional features.
-
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
