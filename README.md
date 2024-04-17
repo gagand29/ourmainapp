@@ -4,7 +4,7 @@ Welcome to the Laravel Social Media App repository! This project aims to develop
 
 ## Project Status
 
-⚠️ **Work in Progress**: Work in Progress
+⚠️ **Work in Progress**: 
 The project is actively being developed and enhanced with new features. Here's what has been implemented so far:
 
 User Registration and Login: Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
