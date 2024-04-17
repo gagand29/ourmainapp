@@ -5,12 +5,52 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Intervention\Image\ImageManager;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class UserController extends Controller
 {   
 
+
+
+    public function storeAvatar(Request $request){
+        $request->file('avatar')->store('public/avatars');
+        $request->validate([
+
+            'avatar' => 'required|image|max: 3000 '
+        ]);
+
+        $user = auth()->user();
+        $filename = $user->id . "-" .  uniqid() . ".jpg";
+
+        $manager = new ImageManager(new Driver());
+        $image = $manager->read($request->file("avatar"));
+        $imgData = $image->cover(120,120)->toJpeg();
+        Storage::put("public/avatars/" . $filename ,$imgData);
+
+        $oldAvatar=$user->avatar;
+
+        $user->avatar = $filename;
+        $user->save();
+
+        if($oldAvatar != "/fallback-avatar.jpg"){
+            storage::delete(str_replace("/storage/","public/", $oldAvatar));
+
+        }
+
+        return back()->with('success','congrats on new avatar');
+        
+    }
+
+
+    public function showAvatarform(){
+        return view('avatar-form');
+    }
+
     public function profile(User $user) {
         return view('profile-posts', [
+            'avatar' => $user->avatar,
             'username' => $user->username,
             'posts' => $user->posts()->latest()->get(),
             'postCount' => $user->posts()->count()

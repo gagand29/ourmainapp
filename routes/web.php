@@ -6,6 +6,15 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 
 
+
+Route::get('/admins-only', function(){
+    if(Gate::allows('visitAdminPages')){
+        return 'only admins should able to see this page.';
+    }
+    return 'you cannot view this page';
+});
+//->middleware('can:visitAdminPages');
+
 //user related routes
 Route::get('/', [UserController::class, "showCorrectHomepage"])->name('login');
 
@@ -14,6 +23,10 @@ Route::post('/register',[UserController::class, "register"])->middleware('guest'
 Route::post('/login',[UserController::class, "login"])->middleware('guest');
 
 Route::post('/logout',[UserController::class, "logout"])->middleware('auth');
+
+Route::get('/manage-avatar',[UserController::class,'showAvatarForm'])->middleware('auth');
+
+Route::post('/manage-avatar',[UserController::class,'storeAvatar'])->middleware('auth');
 
 
 // Blog post related routes

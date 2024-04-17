@@ -5,7 +5,6 @@ namespace App\Http;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Http\Middleware\MustBeLoggedIn;
 
-
 class Kernel extends HttpKernel
 {
     /**
@@ -16,7 +15,7 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
-        //App\Http\Middleware\TrustHosts::class,
+        // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Http\Middleware\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
@@ -55,7 +54,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
-        'must-be-logged-in' => \app\Http\Middleware\MustBeLoggedIn::class,
+        'must-be-logged-in' => MustBeLoggedIn::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
