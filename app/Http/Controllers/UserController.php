@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Follow;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\View;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
-use App\Models\Follow;
 
 class UserController extends Controller
 {   
@@ -49,7 +50,7 @@ class UserController extends Controller
         return view('avatar-form');
     }
 
-    public function profile(User $user) {
+    Private function getsharedData($user){
 
         $currentlyFollowing = 0;
 
@@ -59,19 +60,54 @@ class UserController extends Controller
 
         }
 
-        //$currentlyFollowing = Follow::where();
-
-
-        return view('profile-posts', [
+        View::share('sharedData',[
             'currentlyFollowing' => $currentlyFollowing,
             'avatar' => $user->avatar,
             'username' => $user->username,
-            'posts' => $user->posts()->latest()->get(),
-            'postCount' => $user->posts()->count()
+            'postCount' => $user->posts()->count(),
+            'followerCount' => $user->followers()->count(),
+            'followingCount' => $user->followingTheseUsers()->count()
+        ]);
+
+    }
+
+
+
+    public function profile(User $user) {
+
+        $this->getSharedData($user);
+        return view('profile-posts', [
+            'posts' => $user->posts()->latest()->get()
         ]);
 
 
     }
+
+
+    public function profileFollowers(User $user) {
+        //$currentlyFollowing = Follow::where();
+        $this->getSharedData($user);
+
+        return view('profile-followers', [
+            'followers' => $user->followers()->latest()->get()
+        ]);
+    }
+
+
+    public function profileFollowing(User $user) {
+
+        $this->getSharedData($user);
+        //$currentlyFollowing = Follow::where();
+
+
+        return view('profile-following', [
+            'following' => $user->followingTheseUsers()->latest()->get()
+        ]);
+
+
+    }
+
+
 
     public function logout() {
         auth()->logout();
