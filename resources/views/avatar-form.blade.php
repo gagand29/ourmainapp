@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout doctitle="Manage your avatar">
     <div class="container cntainer--narrow py-md-5">
 
         <h2 class="text-center mb-3">Upload a New Avatar </h2>
