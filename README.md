@@ -8,15 +8,23 @@ Welcome to the Laravel Social Media App repository! This project aims to develop
 
 The project is actively being developed and enhanced with new features. Here's what has been implemented so far:
 
-User Registration and Login: Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
+-   **User Registration and Login:** Basic functionalities for user registration and login have been implemented, allowing users to create accounts and securely log in.
 
-**User Profiles:** Users can now personalize their profiles by uploading avatars and updating their profile information.
+-   **User Profiles:** Users can now personalize their profiles by uploading avatars and updating their profile information.
 
-**Content Posting:** The ability to create and manage blog posts has been added. Users can create, edit, and delete their own blog posts.
+-   **Following and Followers:** Users can follow and unfollow other users, and view a list of users they are following.
 
-**File Uploads:** Users can upload files, such as avatars, to personalize their profiles.
+-   **Content Posting:** The ability to create and manage posts has been added. Pagination is implemented for better user experience.
 
-Future updates will include additional features such as user profiles, content posting, and live search.
+-   **Search Functionality:** Implemented search functionality using Scout Laravel to allow users to search for posts and users.
+
+-   **Document and Page Title:** Added dynamic document/page title for improved SEO and user experience.
+
+-   **Post Component:** Created a reusable post component for displaying individual posts.
+
+-   **Database Seeding:** Seed data has been added for users to populate the initial database for testing purposes.
+
+Future updates will include additional features such as real-time notifications, messaging, and more.
 
 ## Getting Started
 
@@ -26,6 +34,8 @@ To get started with the project:
 2. Set up your local development environment for Laravel.
 3. Run migrations to set up the database schema.
 4. Start the Laravel development server.
+5. Install Node.js and run `npm install` to install dependencies.
+6. Run `npm run dev` or `npm run build` while working on the project to compile assets.
 
 ## Project Structure
 
@@ -42,20 +52,7 @@ To get started with the project:
 -   **JavaScript**: Used for frontend interactivity.
 -   **HTML/CSS**: Structuring web pages and styling.
 -   **MySQL**: Database management system.
--   # **Text Editor**: VS Code, with the following extensions: - Laravel Blade Snippets - PHP Namespace Resolver
--   **app/**: Contains the application logic.
--   **database/**: Includes database migrations and seeders.
--   **public/**: Houses the public assets of the application.
--   **resources/**: Contains views, language files, and assets.
--   **routes/**: Defines application routes.
--   **tests/**: Contains PHPUnit tests for the application.
-
-## Languages and Tools Used
-
--   **PHP**: Primary language used for backend development.
--   **JavaScript**: Used for frontend interactivity.
--   **HTML/CSS**: Structuring web pages and styling.
--   **MySQL**: Database management system.
+-   **Node.js/NPM**: For compiling assets and managing frontend dependencies.
 -   **Text Editor**: VS Code, with the following extensions:
     -   Laravel Blade Snippets
     -   PHP Namespace Resolver
@@ -126,7 +123,3 @@ In order to ensure that the Laravel community is welcoming to all, please review
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

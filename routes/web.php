@@ -50,6 +50,7 @@ Route::get('/post/{post}/edit',[PostController::class, 'showEditForm'])->middlew
 
 Route::put('/post/{post}',[PostController::class, 'actuallyUpdate'])->middleware('can:update,post');
    
+Route::get('/search/{term}',[PostController::class, 'search']);
 //profile related routes
 
 Route::get('/profile/{user:username}',[UserController::class, 'profile']);
