@@ -24,7 +24,13 @@ The project is actively being developed and enhanced with new features. Here's w
 
 -   **Database Seeding:** Seed data has been added for users to populate the initial database for testing purposes.
 
-Future updates will include additional features such as real-time notifications, messaging, and more.
+**Real-Time Chat Functionality:** We can implement a chat function using Pusher or Ably. Pusher setup is straightforward. To integrate Pusher, run the following command: `composer require pusher/pusher-php-server`. Don't forget to include Pusher details in the `.env` file.
+
+- **Single Page Application (SPA):** Included a definition and explanation of how the single-page application works. In an SPA, the entire application is contained within a single HTML page. Navigation between pages is done dynamically without the need for full page reloads, resulting in a smoother user experience. 
+
+- **Cache Middleware:** Added cache middleware with a maximum cache time of 19 seconds, which you can verify in Chrome Dev Tools.
+
+Future updates will include additional features such as Email, Cache and much more.
 
 ## Getting Started
 
@@ -92,25 +98,6 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[WebReinvent](https://webreinvent.com/)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
--   **[Jump24](https://jump24.co.uk)**
--   **[Redberry](https://redberry.international/laravel/)**
--   **[Active Logic](https://activelogic.com)**
--   **[byte5](https://byte5.de)**
--   **[OP.GG](https://op.gg)**
 
 ## Contributing
 

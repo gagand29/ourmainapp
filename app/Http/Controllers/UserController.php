@@ -83,6 +83,12 @@ class UserController extends Controller
 
     }
 
+    public function profileRaw(User $user) {
+        return response()->json(['theHTML' => view('profile-posts-only',['posts'=>$user->posts()->latest()->get()])->render() , 'docTitle' => $user->username . "'s Profile"]);
+
+    }
+
+
 
     public function profileFollowers(User $user) {
         //$currentlyFollowing = Follow::where();
@@ -91,6 +97,12 @@ class UserController extends Controller
         return view('profile-followers', [
             'followers' => $user->followers()->latest()->get()
         ]);
+    }
+
+    public function profileFollowersRaw(User $user) {
+        //$currentlyFollowing = Follow::where();
+        return response()->json(['theHTML' => view('profile-followers-only',['followers'=>$user->followers()->latest()->get()])->render() , 'docTitle' => $user->username . "'s followers"]);
+        
     }
 
 
@@ -103,6 +115,14 @@ class UserController extends Controller
         return view('profile-following', [
             'following' => $user->followingTheseUsers()->latest()->get()
         ]);
+
+
+    }
+
+    public function profileFollowingRaw(User $user) {
+
+
+        return response()->json(['theHTML' => view('profile-following-only',['following'=>$user->followingTheseUsers()->latest()->get()])->render() , 'who ' => $user->username . "'s follows"]);
 
 
     }
