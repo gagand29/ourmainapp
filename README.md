@@ -26,15 +26,16 @@ The project is actively being developed and enhanced with new features. Here's w
 
 **Real-Time Chat Functionality:** We can implement a chat function using Pusher or Ably. Pusher setup is straightforward. To integrate Pusher, run the following command: `composer require pusher/pusher-php-server`. Don't forget to include Pusher details in the `.env` file.
 
-- **Single Page Application (SPA):** Included a definition and explanation of how the single-page application works. In an SPA, the entire application is contained within a single HTML page. Navigation between pages is done dynamically without the need for full page reloads, resulting in a smoother user experience. 
+-   **Single Page Application (SPA):** Included a definition and explanation of how the single-page application works. In an SPA, the entire application is contained within a single HTML page. Navigation between pages is done dynamically without the need for full page reloads, resulting in a smoother user experience.
 
-- **Cache Middleware:** Added cache middleware with a maximum cache time of 19 seconds, which you can verify in Chrome Dev Tools.
+-   **Cache Middleware:** Added cache middleware with a maximum cache time of 19 seconds, which you can verify in Chrome Dev Tools.
 
 -   **Email Testing with Mailtrap or SendGrid:** For testing real emails, you can use Mailtrap, which is free. Alternatively, SendGrid is also an option. Update the `.env` file with the necessary details for testing emails.
 
 -   **API Testing with Insomnia:** To test APIs, you can use Insomnia. Install Laravel Sanctum for API authentication. Laravel Sanctum provides a simple authentication system for SPAs (single page applications), mobile applications, and simple, token-based APIs. To install Laravel Sanctum, run `composer require laravel/sanctum` and follow the documentation for setup.
 
-Future updates will include additional features such as going live with forge.laravel and FYI: we can deploy it on digitalOcean, linode, vultr, amazon, hetzner and more..
+Future updates will include additional features such as going live with forge.laravel and FYI: we can deploy it on digitalOcean, linode, vultr, amazon, hetzner and more..but i dont want to spend money so using docker to practice for free. It will be easy too. 
+Thank you
 
 ## Getting Started
 
@@ -101,7 +102,6 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
 
 ## Contributing
 
