@@ -61,7 +61,7 @@ Route::get('/profile/{user:username}/following',[UserController::class, 'profile
 
 
 
-Route::middleware('cache.headers:public;max_age=20;etag')->group(function(){
+Route::middleware('cache.headers:public;max_age=19;etag')->group(function(){
     Route::get('/profile/{user:username}/raw',[UserController::class, 'profileRaw']);
 
 Route::get('/profile/{user:username}/followers/raw',[UserController::class, 'profileFollowersRaw']);

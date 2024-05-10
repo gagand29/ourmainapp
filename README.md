@@ -30,7 +30,11 @@ The project is actively being developed and enhanced with new features. Here's w
 
 - **Cache Middleware:** Added cache middleware with a maximum cache time of 19 seconds, which you can verify in Chrome Dev Tools.
 
-Future updates will include additional features such as Email, Cache and much more.
+-   **Email Testing with Mailtrap or SendGrid:** For testing real emails, you can use Mailtrap, which is free. Alternatively, SendGrid is also an option. Update the `.env` file with the necessary details for testing emails.
+
+-   **API Testing with Insomnia:** To test APIs, you can use Insomnia. Install Laravel Sanctum for API authentication. Laravel Sanctum provides a simple authentication system for SPAs (single page applications), mobile applications, and simple, token-based APIs. To install Laravel Sanctum, run `composer require laravel/sanctum` and follow the documentation for setup.
+
+Future updates will include additional features such as going live with forge.laravel and FYI: we can deploy it on digitalOcean, linode, vultr, amazon, hetzner and more..
 
 ## Getting Started
 
